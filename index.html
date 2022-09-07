@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" minimum-scale=1.0, maximum-scale=1.0,
+        user-scalable=no">
+    <title>Marvel Kate Bishop</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/df18b2a205.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="overlay">
+        <img src="./res/images/marvel.svg" alt="Marvel Logo">
+    </div>
+
+    <div class="wrapper">
+        <img class="logo" src="./res/images/marvelwhite.svg" alt="Marvel Logo">
+        <div class="content">
+            <div class="box">
+
+                <p class="char-name">Kate Bishop</p>
+                <p class="real-name">Hailee Steinfeld</p>
+                <p class="about-char">Kate Bishop is a fictional character appearing in American comic books published
+                    by Marvel Comics.</p>
+
+            </div>
+
+            <div class="char">
+                <img src="./res/images/kate-bishop2.svg" alt="Kate Bishop Image" draggable="false">
+            </div>
+        </div>
+
+        <div class="small-screen-message">
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> Sorry, this Page will only work on Bigger Screen.</h2>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <!-- three js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+        integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
+
+    <script>
+        TweenMax.to(".overlay img", 2, {
+            opacity: 0,
+            y: -60,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.to(".overlay", 2, {
+            delay: 1,
+            top: "-100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".logo", 1.5, {
+            opacity: 0,
+            delay: 2,
+            y: "100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".char-name", 1.5, {
+            opacity: 0,
+            delay: 2.6,
+            x: "100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".real-name", 1.5, {
+            opacity: 0,
+            delay: 2.8,
+            x: "100%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".about-char", 1.5, {
+            opacity: 0,
+            delay: 3.4,
+            x: "120%",
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from(".char", 1.5, {
+            opacity: 0,
+            delay: 3.6,
+            x: "100%",
+            ease: Expo.easeInOut
+        });
+
+    </script>
+</body>
+
+</html>

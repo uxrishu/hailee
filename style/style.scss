@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Satoshi-Regular";
+    src: url("../res/fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+    font-family: "Satoshi-Bold";
+    src: url("../res/fonts/Satoshi-Bold.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bg-col: #380B5B;
+
+$big-cir-col: #4C0F7B;
+$med-cir-col: #5F139B;
+$sml-cir-col: #7317BB;
+
+$white-col: #FFFFFF;
+
+html,
+body {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: $bg-col;
+    height: 860px;
+}
+
+.small-screen-message {
+    display: none;
+}
+
+.wrapper {
+    width: 1400px;
+    margin: 0 auto;
+    height: 800px;
+}
+.logo{
+    cursor: pointer;
+    width: 80px;
+    height: auto;
+    top: 6px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F0141E;
+    top: 0%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 320px;
+        height: auto;
+        margin: 0em auto;
+        object-fit: cover;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+}
+
+.box {
+    position: relative;
+
+    .char-name {
+        font-family: "Satoshi-Bold";
+        color: $white-col;
+        transform: rotate(-90deg);
+        font-size: 120px;
+        max-zoom: 100%;
+        margin-top: 280px;
+        z-index: -999;
+        margin-left: -200px;
+    }
+
+    .real-name {
+        font-family: "Satoshi-Regular";
+        font-size: 70px;
+        color: $white-col;
+        opacity: 0.5;
+        transform: rotate(-90deg);
+        margin-top: 8px;
+        margin-left: 80px;
+        z-index: -999;
+    }
+
+    .about-char {
+        width: 280px;
+        font-family: "Satoshi-Regular";
+        font-size: 16px;
+        line-height: 26px;
+        color: $white-col;
+        margin-top: 116px;
+        z-index: -999;
+        position: absolute;
+        left: 450px;
+    }
+}
+
+.char {
+    position: absolute;
+    right: 460px;
+    top: 0px;
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1300px) {
+    .small-screen-message {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            color: $white-col;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Satoshi-Regular";
+        }
+    }
+
+    .content {
+        display: none;
+    }
+}
